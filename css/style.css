@@ -6,11 +6,11 @@
 /* TEMA DARK */
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;  /*cor principal Textos*/
-    --primary-bg-color: #18073a;  /*cor principal Fundo*/ 
+    --primary-bg-color: #4d1164;  /*cor principal Fundo*/ 
     /* bg = background == cor do Fundo */
     --secondary-bg-color: #28292E;  
     --primary-border-color: #28292E;
-    --secondary-border-color: #56575A;
+    --secondary-border-color: #c1c2c4;
     --title-color: #F0F0F0;
     
     --link-color: #8f8f8f;
@@ -22,7 +22,7 @@
 :root[data-theme='light'] {
     --primary-color: #0d0c09; /* cor principal textos */
 
-    --primary-bg-color: #f0f2f5;
+    --primary-bg-color: #e2c3ef;
     --secondary-bg-color: #C7C8C9;
 
     --primary-border-color: #C7C8C9;
@@ -81,21 +81,21 @@ i {
     height: 3.25rem;
 }
 
-.header-logo .logo2{
+.header-logo .logo2 {
     width: 15rem;
     height: 2rem;
-    margin-left: 1ch;
+    margin-left: 10px;
     position: relative;
     bottom: 5px;
 }
 
-html[data-theme = 'light'] .logo{
+html[data-theme='light'] .logo {
     filter: invert(1);
-}
+} 
 
-html[data-theme = 'light'] .logo2{
+html[data-theme='light'] .logo2 {
     filter: invert(1);
-}
+} 
 
 #toggleTheme {
     font-size: 1.5rem; 
@@ -148,20 +148,24 @@ html[data-theme = 'light'] .logo2{
     font-size: 1.5rem;
 }
 
-.menu-text{
-   font-size: .75rem;
-   text-transform: uppercase; 
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
 }
 
-.header-nav{
+.header-nav {
     display: none;
 }
 
-.menu-principal{
+.menu-principal {
     gap: 1rem;
 }
 
-.btn{
+.menu-social {
+   gap: 1rem; 
+}
+
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,34 +180,63 @@ html[data-theme = 'light'] .logo2{
     transition: ease-in-out .3s;
 }
 
-.btn-primary{
+.btn-primary {
     border: 1px solid var(--secondary-border-color);
 }
 
-.btn-primary:hover{
+.btn:hover {
     transform: scale(1.07);
     transition: ease-in-out 0.5s;
 }
 
-.btn span, .btn i{
-    font-size: ;
+.btn span,
+.btn i {
+    font-size: 1.25rem;
+    text-transform: uppercase;
 }
 
-/* --------------------------------------------------- */
+.btn-primary span {
+    color: var(--primary-color);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#home, .projetos, .sobre, .contato{
+    padding: 7rem 5rem;
+}
+
+
+
+/* =====  --------------------- ======= */
 
 /* CSS Responsivo */
-@media (min-width: 768px){
-    .header{
+@media (min-width: 768px)  {
+    .header {
         position: fixed;
-        border-bottom: 1px solid var(--primary-border-color);
+        border-bottom: 3px solid var(--primary-border-color);
         padding: 1rem 6rem;
     }
-
-    .nav-mobile{
+    .nav-mobile {
         display: none;
     }
-
-    .header-nav{
+    .header-nav {
         display: flex;
     }
 }
+
+
